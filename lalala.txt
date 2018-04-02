@@ -1,0 +1,23 @@
+<！DOCTYPE html>
+< html  lang = “ en ” >
+< head >
+    < meta  charset = “ UTF-8 ” >
+    < title >标题</ title >
+    <！ -新Bootstrap核心CSS文件- >
+    < link  rel = “ stylesheet ”  href = “ //cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css ” >
+    < style >
+        .container {
+            margin-top： 100 px ;
+        }
+    < / style >
+</ head >
+< body >
+	< h1 > lala 1 </ h1 >
+	< h1 > hehe 2 </ h1 >
+	< h1 > lala 3 </ h1 >
+	< h1 >哈哈4 </ h1 >
+	
+	我在公司写的开发中的代码我擦擦擦
+</ body >
+</ html >
+发发发发
