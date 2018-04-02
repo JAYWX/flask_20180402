@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <style>
+        .container {
+            margin-top: 100px;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="row">
+        <div class="col-md-6">
+
+            <form action="/login/" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="user">user</label>
+                    {# 实例化对象login_form.form中字段名,若未绑定表单实例的会渲染出一个没有值的input，若绑定表单实例的会渲染出其中的值#}
+                    {# 错误对象.form中的字段名.0 拿出该错误字段列表中的第一个错误信息  errors={"user":["该字段不能是纯数字",],"pwd":["",""]} #}
+                    {{ login_form.user }} <span>{{ errors.user.0 }}</span>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">pwd</label>
+                    {{ login_form.pwd }} <span>{{ errors.pwd.0 }}</span>
+                </div>
+                <div class="form-group">
+                    <label for="gender">gender</label>
+                    {#    全局钩子中的错误信息 error_all.0   #}
+                    {{ login_form.gender }}<span>{{ error_all.0 }}</span>
+                </div>
+
+                <p>{{ login_form.usersss }}</p>
+
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <hr>
+            {#            <form action="">#}
+            {#                {{ login_form.as_p }}#}
+            {#            </form>#}
+
+        </div>
+    </div>
+</div
+</body>
+</html>
